@@ -116,8 +116,10 @@ function switchState(){
             answer1.style.display = "block";
             resetButtonText = "Reset";
             headerText = "Your symbol is";
+            infoText = "Would you like to go again? <br> Click the reset button below to play again!";
             header1.innerHTML = headerText;
             answer1.innerHTML = correctSymbol;
+            infoP.innerHTML = infoText;
             resetBtn.innerHTML = resetButtonText;
             break;
     }
