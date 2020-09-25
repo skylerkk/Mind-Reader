@@ -21,6 +21,8 @@ const mainBtn = document.getElementById("mainButton");
 const resetBtn = document.getElementById("resetButton");
 const header1 = document.getElementById("header");
 const answer1 = document.getElementById("answer");
+const img1 = document.getElementById("image1")
+const img2 = document.getElementById("image2")
 const infoP = document.getElementById("info");
 var state = 1;
 let buttonText = "";
@@ -60,6 +62,8 @@ function switchState(){
         case 1:
             resetButtonText = "Go";
             headerText = "I can read your mind!";
+            img1.style.display = "none";
+            img2.style.display = "none";
             infoP.style.display = "none";
             mainBtn.style.display = "none";
             answer1.style.display = "none";
@@ -112,8 +116,23 @@ function switchState(){
             resetBtn.innerHTML = resetButtonText;
             break;
         case 6:
+            headerText = "Please wait!"
+            infoText = "Your symbol is loading";
+            img1.style.display = "block";
+            img1.style.width = "300px";
+            img1.style.height = "300px";
+            header1.innerHTML = headerText;
+            infoP.innerHTML = infoText;
+            break;
+        case 7:
             mainBtn.style.display = "none";
+            img1.style.display = "none";
+            img2.style.display = "block";
             answer1.style.display = "block";
+            infoP.style.display = "block";
+            img2.style.marginTop = "20px";
+            img2.style.width = "300px";
+            img2.style.height = "200px";
             resetButtonText = "Reset";
             headerText = "Your symbol is";
             infoText = "Would you like to go again? <br> Click the reset button below to play again!";
