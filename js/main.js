@@ -121,6 +121,8 @@ function switchState(){
             img1.style.display = "block";
             img1.style.width = "300px";
             img1.style.height = "300px";
+            img1.style.marginTop = "-100px";
+            img1.style.marginBottom = "20px";
             header1.innerHTML = headerText;
             infoP.innerHTML = infoText;
             break;
@@ -130,7 +132,7 @@ function switchState(){
             img2.style.display = "block";
             answer1.style.display = "block";
             infoP.style.display = "block";
-            img2.style.marginTop = "20px";
+            img2.style.marginTop = "-40px";
             img2.style.width = "300px";
             img2.style.height = "200px";
             resetButtonText = "Reset";
